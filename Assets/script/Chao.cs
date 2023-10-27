@@ -6,7 +6,7 @@ public class Chao : MonoBehaviour
 {
 
     public GerenciadorDoJOGO GJ;
-    public int vida = 3;
+    
     //public GameObject AtivarLixo;
     void Start()
     {
@@ -21,25 +21,34 @@ public class Chao : MonoBehaviour
   
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "comida" || collision.tag == "lixo")
-        {
-            GJ.PerderVida();
-        }
-     
-   
         if (collision.tag == "lixo")
         {
-
-            //AtivarLixo.SetActive(true);
+            Destroy(collision.gameObject);
+            GJ.PerderVida();           
+        }
+        if (collision.tag == "lixo")
+        {           
             Rigidbody2D rigidbody2D = collision.GetComponent<Rigidbody2D>();
             rigidbody2D.velocity = Vector3.zero;
             rigidbody2D.isKinematic = true;
             rigidbody2D.mass = 1000;
-
             Collider2D collider = collision.GetComponent<Collider2D>();
             collider.isTrigger = false;
-
         }
+        if (collision.tag == "comida")
+        {
+            Destroy(collision.gameObject);
+            GJ.GanhaPontos();
+        }
+            if (collision.tag == "comida")
+            {
+               Rigidbody2D rigidbody2D = collision.GetComponent<Rigidbody2D>();
+               rigidbody2D.velocity = Vector3.zero;
+               rigidbody2D.isKinematic = true;
+               rigidbody2D.mass = 1000;
+               Collider2D collider = collision.GetComponent<Collider2D>();
+              collider.isTrigger = false;
+            }
     }
 
 }

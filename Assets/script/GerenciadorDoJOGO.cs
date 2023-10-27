@@ -8,8 +8,8 @@ public class GerenciadorDoJOGO : MonoBehaviour
 {
     public bool JogoOn = false;
     public int pontos = 0;
-    public GameObject TelaMorte;
     public int vida = 3;
+    public GameObject TelaMorte;
 
     
      private void  Awake()

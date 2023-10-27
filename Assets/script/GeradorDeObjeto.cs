@@ -17,7 +17,7 @@ public class GeradorDeObjeto : MonoBehaviour
     void Update()
     {
         tempo += Time.deltaTime;
-        if (tempo > 0.5f )
+        if (tempo > 2f )
         {
             tempo = 0;
             float posX = Random.Range(-2, 2);

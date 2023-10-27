@@ -21,7 +21,7 @@ public class GerenciadorDoJOGO : MonoBehaviour
     public void Play()
     {
         JogoOn=true;
-        Time.timeScale = 1f;
+        Time.timeScale = 2f;
     }
     
     void Update()
@@ -41,7 +41,10 @@ public class GerenciadorDoJOGO : MonoBehaviour
         if (vida < 1)
         {
             TelaMorte.SetActive(true);
-            
+            JogoOn = false;
+            Time.timeScale = 0;
+
+
         }
     }
 

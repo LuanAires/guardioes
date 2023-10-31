@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -11,28 +10,23 @@ public class GerenciadorDoJOGO : MonoBehaviour
     public int pontos = 0;
     public int vida = 3;
     public GameObject TelaMorte;
-    public TextMeshProUGUI TextVida;
-    public TextMeshProUGUI TextPontos;
 
+    
      private void  Awake()
-     {
-        JogoOn = false;
-        Time.timeScale = 0;      
-     }
-    public void iniciar()
     {
-        int vida_compradas = Chao.GetInt("Ch")
+        JogoOn = false;
+        Time.timeScale = 0;
+        
     }
     public void Play()
     {
         JogoOn=true;
-        Time.timeScale = 1f;
+        Time.timeScale = 2f;
     }
     
     void Update()
     {
-        TextVida.text=vida.ToString();
-        TextPontos.text=pontos.ToString();
+        
     }
   
     
@@ -49,6 +43,10 @@ public class GerenciadorDoJOGO : MonoBehaviour
             TelaMorte.SetActive(true);
             JogoOn = false;
             Time.timeScale = 0;
+
+
         }
     }
+
+
 }

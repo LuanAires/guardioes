@@ -6,7 +6,8 @@ public class Chao : MonoBehaviour
 {
 
     public GerenciadorDoJOGO GJ;
-    public int vida = 3;
+    public int Vidas = 3;
+    public int pontos = 0;
     //public GameObject AtivarLixo;
     void Start()
     {

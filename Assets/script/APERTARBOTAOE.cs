@@ -18,7 +18,7 @@ public class APERTARBOTAOE : Button
     {
         if (IsPressed() == true)
         {
-            personagem.GetComponent<Player>().MoverE();
+            personagem.GetComponent<Caranguejo>().MoverE();
         }
     }
 }

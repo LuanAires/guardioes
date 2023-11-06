@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Banco : MonoBehaviour
 {
-    public int meuDinheiro = 0;
+    public int ValorBanco;
     void Start()
     {
         
@@ -12,16 +12,22 @@ public class Banco : MonoBehaviour
 
     public void GuardarDinheiro(int novoDinheiro)
     {
-        meuDinheiro = novoDinheiro;
-        PlayerPrefs.SetInt("Dinheiro", meuDinheiro);
+        //Recebo o que já tem no banco
+        ValorBanco = PlayerPrefs.GetInt("MinhasMoedas");
+        // Soma o que já tem
+        ValorBanco = ValorBanco + novoDinheiro;
+        // Guarda o novo valor
+        PlayerPrefs.SetInt("minhasMoedas", novoDinheiro);
+
     }
     public int SaldoDinheiro()
     {
-        meuDinheiro = PlayerPrefs.GetInt("dinheiro");
-        return meuDinheiro;
+        ValorBanco = PlayerPrefs.GetInt("dinheiro");
+        return ValorBanco;
     }
     void Update()
     {
         
     }
+
 }

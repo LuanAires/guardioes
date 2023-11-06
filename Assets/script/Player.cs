@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public float tempo;
     public bool podeMover = false;
     public GerenciadorDoJOGO GJ;
+    public AudioSource somCaranguejo;
+    public AudioClip AudioAndando;
 
     void Start()
     {
@@ -57,6 +59,7 @@ public class Player : MonoBehaviour
             Vector3 destinoFinal = new Vector3(-2f, -4 + 0.5f, 0);
             //Jogador segue
             transform.position = Vector3.MoveTowards(transform.position, destinoFinal, 0.01f);
+            somCaranguejo.PlayOneShot(AudioAndando);
         }
     }
     public void MoverD()

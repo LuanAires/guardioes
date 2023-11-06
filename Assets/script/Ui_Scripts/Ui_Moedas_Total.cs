@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ui_Vidas : MonoBehaviour
+public class Ui_Moedas_Total : MonoBehaviour
 {
-
-    private Chao Infochao;
+    private Banco MeuBanco;
     private Text MeuTexto;
     // Start is called before the first frame update
     void Start()
     {
-        Infochao =GameObject.FindGameObjectWithTag("Lixeira").GetComponent<Chao>();
+        MeuBanco = GameObject.FindGameObjectWithTag("GameController").GetComponent<Banco>();
         MeuTexto = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //MeuTexto.text= Infochao.informaVida.ToString();
+        MeuTexto.text = MeuBanco.SaldoDinheiro().ToString();
+        
     }
 }

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
         GJ = FindObjectOfType<GerenciadorDoJOGO>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -31,9 +32,8 @@ public class Player : MonoBehaviour
         {
             podeMover= false;
         }
-
-
     }
+
     void MoverDedo()
     {
         if (podeMover == true)
@@ -59,7 +59,10 @@ public class Player : MonoBehaviour
             Vector3 destinoFinal = new Vector3(-2f, -4 + 0.5f, 0);
             //Jogador segue
             transform.position = Vector3.MoveTowards(transform.position, destinoFinal, 0.01f);
-            somCaranguejo.PlayOneShot(AudioAndando);
+            if (!somCaranguejo.isPlaying)
+            {
+                somCaranguejo.PlayOneShot(AudioAndando);
+            }
         }
     }
     public void MoverD()
@@ -69,6 +72,10 @@ public class Player : MonoBehaviour
             Vector3 destinoFinal = new Vector3(2f, -4 + 0.5f, 0);
             //Jogador segue
             transform.position = Vector3.MoveTowards(transform.position, destinoFinal, 0.01f);
+             if (!somCaranguejo.isPlaying)
+            {
+                somCaranguejo.PlayOneShot(AudioAndando);
+            }
         }
 
     }

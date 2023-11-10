@@ -15,34 +15,33 @@ public class GerenciadorDoJOGO : MonoBehaviour
     public TextMeshProUGUI TextPontos;
     private Banco MeuBanco;
 
-     private void  Awake()
+    public void Inicio()
+    {
+        int vida_compradas = PlayerPrefs.GetInt("nivelVida");
+        vida = vida + vida_compradas;
+    }
+
+    private void  Awake()
      {
         JogoOn = false;
         Time.timeScale = 0;
         MeuBanco = GetComponent<Banco>();
      }
-    public void iniciar()
-    {
-        int vida_compradas = PlayerPrefs.GetInt("nivelVida");
-        vida = vida + vida_compradas;
-    }
-    public void Play()
-    {
+     public void Play()
+     {
+        Inicio();   
         JogoOn=true;
         Time.timeScale = 1f;
-    }
-    public int informaVida()
+     }
+    public int informeVida()
     {
         return vida;
-    }
-    
+    } 
     void Update()
     {
         TextVida.text=vida.ToString();
         TextPontos.text=pontos.ToString();
     }
-  
-    
     public bool EstadoJogo()
     {
       return JogoOn;   
@@ -63,7 +62,6 @@ public class GerenciadorDoJOGO : MonoBehaviour
     {
         MeuBanco.GuardarDinheiro(n_moedas);
     }
-
     public int InformarValorNoBanco()
     {
         return MeuBanco.SaldoDinheiro();

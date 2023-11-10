@@ -12,13 +12,10 @@ public class Chao : MonoBehaviour
     {
         GJ = FindObjectOfType<GerenciadorDoJOGO>();
     }
-
-    
     void Update()
     {
         
     }
-  
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "lixo")
@@ -38,7 +35,7 @@ public class Chao : MonoBehaviour
         if (collision.tag == "comida")
         {
             Destroy(collision.gameObject);
-           // GJ.GanhaPontos();
+          
         }
         if (collision.tag == "comida")
         {

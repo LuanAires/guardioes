@@ -18,6 +18,6 @@ public class Ui_Vidas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //MeuTexto.text= Infochao.informaVida.ToString();
+        //MeuTexto.text= Infochao.InformeVida().ToString();
     }
 }

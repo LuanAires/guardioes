@@ -1,0 +1,3 @@
+MostrarValorGuardiao.text = "Novo Guardiao Isri  : " + infoGuardiao.ToString() + " $ : " + valorB.ToString();
+MostrarValorGuardiao.text = "Novo Guardiao Télson : " + infoGuardiao.ToString() + " $ : " + valorB.ToString();
+MostrarValorGuardiao.text = "Novo Guardiao Aratu : " + infoGuardiao.ToString() + " $ : " + valorB.ToString();

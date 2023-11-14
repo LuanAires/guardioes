@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +18,7 @@ public class APERTARBOTAOD : Button
     {
         if (IsPressed() == true)
         {
-          personagem.GetComponent<Player>().MoverD();
+          personagem.GetComponent<Caranguejo>().MoverD();
         }
     }
 }

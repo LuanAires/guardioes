@@ -16,8 +16,8 @@ public class Loja : MonoBehaviour
         public TextMeshProUGUI MostrarValorGuardiao;
         //informacoes sobre meu coracao
         private int infocoracao;
-        private int infoGuardiao;
-
+        private int infoGuardiao ;
+        private Banco MeuBanco;
         // Start is called before the first frame update
         void Start()
         {
@@ -34,7 +34,7 @@ public class Loja : MonoBehaviour
 
             infocoracao = PlayerPrefs.GetInt("Guardiao");
             int valorB = infoGuardiao * 50;
-            MostrarValorGuardiao.text = "Novo Guardiao Agumin : " + infoGuardiao.ToString() + " $ : " + valorB.ToString();
+            MostrarValorGuardiao.text = "Novo Guardiao: Agumin " + infoGuardiao.ToString() + " $ : " + valorB.ToString();
             //Manter o valor da bolsa atualizado
              BarraInfo = PlayerPrefs.GetInt("bolsa");
             //Atualizar no canvas

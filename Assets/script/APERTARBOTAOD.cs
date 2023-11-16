@@ -19,6 +19,7 @@ public class APERTARBOTAOD : Button
         if (IsPressed() == true)
         {
           personagem.GetComponent<Caranguejo>().MoverD();
+         
         }
     }
 }

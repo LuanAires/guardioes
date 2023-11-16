@@ -19,6 +19,7 @@ public class APERTARBOTAOE : Button
         if (IsPressed() == true)
         {
             personagem.GetComponent<Caranguejo>().MoverE();
+            
         }
     }
 }

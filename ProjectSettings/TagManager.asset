@@ -9,6 +9,7 @@ TagManager:
   - comida
   - lixo
   - bolsa
+  - Guardiao2
   layers:
   - Default
   - TransparentFX

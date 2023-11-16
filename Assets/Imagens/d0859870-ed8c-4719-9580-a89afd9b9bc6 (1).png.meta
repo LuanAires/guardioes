@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 415
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 4, z: 31, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6097f957576024799b789753c89948
+      internalID: -1072901250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +147,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_6: -1816470176
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_4: -1072901250
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_7: 1243962412
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_0: -1519467668
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_2: 1018131379
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_1: -1028827121
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_3: 84548214
+      d0859870-ed8c-4719-9580-a89afd9b9bc6 (1)_5: 1412454676
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -33,25 +33,6 @@ public class Player : MonoBehaviour
             podeMover= false;
         }
     }
-
-    void MoverDedo()
-    {
-        if (podeMover == true)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                Vector3 destino = Input.mousePosition;
-                // corrigir posição
-                Vector3 destinoCorrigido = Camera.main.ScreenToWorldPoint(destino);
-                // Travar em X e Y
-                Vector3 destinoFinal = new Vector3(destinoCorrigido.x, -4 + 0.5f, 0);
-                //Jogador segue
-                transform.position = Vector3.MoveTowards(transform.position, destinoFinal, 0.1f);
-
-            }
-        }
-
-    }
     public void MoverE()
     {
         if (podeMover == true)

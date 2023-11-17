@@ -10,8 +10,8 @@ public class Loja : MonoBehaviour
         public TextMeshProUGUI MostrarValorCoracao;
         public TextMeshProUGUI MostrarValorGuardiao;
         //informacoes sobre meu coracao
-        private int infocoracao= 20;
-        private int infoGuardiao = 50;
+        private int infocoracao= 1;
+        private int infoGuardiao = 1 ;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +24,11 @@ public class Loja : MonoBehaviour
                 
             infocoracao = PlayerPrefs.GetInt("coracao");
             int valorA = infocoracao * 20;
-            MostrarValorCoracao.text = "Vida Lv :" + infocoracao.ToString() + " $ : " + valorA.ToString();
+            MostrarValorCoracao.text = "Vida Lv: " + infocoracao.ToString() + " $ : " + valorA.ToString();
 
             infocoracao = PlayerPrefs.GetInt("Guardiao");
             int valorB = infoGuardiao + 20;
-            MostrarValorGuardiao.text = "Novo Guardiao Agumin :" + infoGuardiao.ToString() + " $ : " + valorB.ToString();
+            MostrarValorGuardiao.text = "Novo Guardiao Agumin: " + infoGuardiao.ToString() + " $ " + valorB.ToString();
             //Manter o valor da bolsa atualizado         
     }
         public void Comprar2(int tipo)
@@ -46,7 +46,7 @@ public class Loja : MonoBehaviour
     public void BT_Gurdiao()
     {
         infoGuardiao = PlayerPrefs.GetInt("Guardiao");
-        int valorB = infocoracao * 5;       
+        int valorB = infoGuardiao * 5;       
         Comprar(valorB, 2);    
     }
     //VERIFICO PAGAMENTO

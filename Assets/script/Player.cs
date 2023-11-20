@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,13 +11,10 @@ public class Player : MonoBehaviour
     public GerenciadorDoJOGO GJ;
     public AudioSource somCaranguejo;
     public AudioClip AudioAndando;
-
     void Start()
     {
-        GJ = FindObjectOfType<GerenciadorDoJOGO>();
+       GJ = FindObjectOfType<GerenciadorDoJOGO>();
     }
-
-
     // Update is called once per frame
     void Update()
     {
@@ -54,22 +51,19 @@ public class Player : MonoBehaviour
             //Jogador segue
             transform.position = Vector3.MoveTowards(transform.position, destinoFinal, 0.01f);
              if (!somCaranguejo.isPlaying)
-            {
+             {
                 somCaranguejo.PlayOneShot(AudioAndando);
-            }
+             }
         }
-
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag=="comida" || other.tag == "lixo") 
         {
-            GJ.pontos++;
+            GJ.moedas++;
             Destroy(other.gameObject);
         }
     }
-
 }
-
+*/
 

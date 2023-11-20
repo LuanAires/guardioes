@@ -19,7 +19,7 @@ public class Caranguejo : MonoBehaviour
     void Update()
     {
         if (botaoAtivado == false)
-            //MoverDedo();
+            
         tempo += Time.deltaTime;
         if(tempo> 0.001f)
         {
@@ -74,7 +74,7 @@ public class Caranguejo : MonoBehaviour
     {
         if(other.tag=="comida" || other.tag == "lixo") 
         {
-            GJ.pontos++;
+            GJ.GanharMoedas();
             Destroy(other.gameObject);
         }
     }

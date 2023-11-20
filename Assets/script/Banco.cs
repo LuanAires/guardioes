@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Banco : MonoBehaviour
 {
-
     const string tagmoedas = "MinhasMoedas";
-
     public int ValorBanco;
     void Start()
     {
         
     }
-
     public void GuardarDinheiro(int novoDinheiro)
     {
         //Recebo o que já tem no banco
@@ -21,7 +18,6 @@ public class Banco : MonoBehaviour
         ValorBanco = ValorBanco + novoDinheiro;
         // Guarda o novo valor
         PlayerPrefs.SetInt(tagmoedas, novoDinheiro);
-
     }
     public int SaldoDinheiro()
     {
@@ -32,5 +28,4 @@ public class Banco : MonoBehaviour
     {
         
     }
-
 }

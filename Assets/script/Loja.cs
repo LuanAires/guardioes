@@ -6,43 +6,43 @@ using UnityEngine.UI;
 
 public class Loja : MonoBehaviour
 {
-        private int BarraInfo;
-        public TextMeshProUGUI MostrarValorCoracao;
-        public TextMeshProUGUI MostrarValorGuardiao;
         //informacoes sobre meu coracao
         private int infocoracao= 1;
         private int infoGuardiao = 1 ;
+        GerenciadorDoJOGO GJ;
+        UIManager uiManager;
     // Start is called before the first frame update
+    void Awake()
+     {
+        uiManager = FindAnyObjectByType<UIManager>();
+        GJ = FindAnyObjectByType<GerenciadorDoJOGO>();
+    }
     void Start()
     {
-         //Busca o Valor do Jogador
-         BarraInfo = PlayerPrefs.GetInt("bolsa");
+         
     }
         // Update is called once per frame
     void Update()
-    {
-                
-            infocoracao = PlayerPrefs.GetInt("coracao");
-            int valorA = infocoracao * 20;
-            MostrarValorCoracao.text = "Vida Lv: " + infocoracao.ToString() + " $ : " + valorA.ToString();
-
-            infocoracao = PlayerPrefs.GetInt("Guardiao");
-            int valorB = infoGuardiao + 20;
-            MostrarValorGuardiao.text = "Novo Guardiao Agumin: " + infoGuardiao.ToString() + " $ " + valorB.ToString();
-            //Manter o valor da bolsa atualizado         
+    {               
+        infocoracao = PlayerPrefs.GetInt("coracao");
+        int valorA = infocoracao * 20;
+        uiManager.textValorCoracao.text = "Vida Lv: " + infocoracao.ToString() + " $ : " + valorA.ToString();
+       infocoracao = PlayerPrefs.GetInt("Guardiao");
+       int valorB = infoGuardiao + 20;
+       uiManager.textValorGuardiao.text = "Novo Guardiao Agumin: " + infoGuardiao.ToString() + " $ " + valorB.ToString();         
     }
-        public void Comprar2(int tipo)
-        {
+    public void Comprar2(int tipo)
+    {
 
-        }
-        //COMPRAR CORACAO
-        public void BT_Vida()
-        {
-            infocoracao = PlayerPrefs.GetInt("coracao");
-            int valorA = infocoracao * 5;
-            //informa valor do coracao e numero da compra 1
-            Comprar(valorA, 1);
-        }
+    }
+     //COMPRAR CORACAO
+    public void BT_Vida()
+    {
+       infocoracao = PlayerPrefs.GetInt("coracao");
+       int valorA = infocoracao * 5;
+       Comprar(valorA, 1);
+       
+    }
     public void BT_Gurdiao()
     {
         infoGuardiao = PlayerPrefs.GetInt("Guardiao");
@@ -52,12 +52,11 @@ public class Loja : MonoBehaviour
     //VERIFICO PAGAMENTO
     void Comprar(int valor, int numerodoproduto)
     {
-        if (valor <= BarraInfo)
+        int moedas = GJ.GetMoedas();
+        //verificar se temos moedas
+        if (valor <= moedas)
         {
-            //Comprou
-            //diminui valor
-            BarraInfo = BarraInfo - valor;
-            PlayerPrefs.SetInt("bolsa", BarraInfo);
+            GJ.GanharMoedas(-valor);
             //CHamara finalização de compra
             FinalizarCompra(numerodoproduto);
         }
@@ -71,7 +70,6 @@ public class Loja : MonoBehaviour
                     AumentarCoracoes();
                     break;
                 default:
-                    //NãoDeveOcorrer
                     break;
                case 2:
                 AumentarGuardioes();
@@ -80,9 +78,9 @@ public class Loja : MonoBehaviour
     }
    void AumentarCoracoes()
    {
-            int coracao = PlayerPrefs.GetInt("coracao");
-            coracao++;
-            PlayerPrefs.SetInt("coracao", coracao);
+       int coracao = PlayerPrefs.GetInt("coracao");
+       coracao++;
+       PlayerPrefs.SetInt("coracao", coracao);
    }
     void AumentarGuardioes()
     {

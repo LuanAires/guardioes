@@ -843,7 +843,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2121265203}
+      - m_Target: {fileID: 1645421777}
         m_TargetAssemblyTypeName: Loja, Assembly-CSharp
         m_MethodName: BT_Gurdiao
         m_Mode: 1
@@ -863,6 +863,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1645421777}
+        m_TargetAssemblyTypeName: Loja, Assembly-CSharp
+        m_MethodName: Comprar2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2638,7 +2650,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795700000}
   m_LocalRotation: {x: -0.005759512, y: -0, z: -0, w: 0.99998343}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2647,7 +2659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: -31}
+  m_AnchoredPosition: {x: -81, y: -32.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795700002
@@ -2782,7 +2794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.69767, y: -369.35162}
+  m_AnchoredPosition: {x: -79, y: -352}
   m_SizeDelta: {x: 585.5746, y: 669.3926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813709584
@@ -3174,7 +3186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2121265203}
+      - m_Target: {fileID: 1645421777}
         m_TargetAssemblyTypeName: Loja, Assembly-CSharp
         m_MethodName: BT_Vida
         m_Mode: 1
@@ -3194,6 +3206,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1645421777}
+        m_TargetAssemblyTypeName: Loja, Assembly-CSharp
+        m_MethodName: Comprar2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4620,6 +4644,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1645421777}
+        m_TargetAssemblyTypeName: Loja, Assembly-CSharp
+        m_MethodName: MostrarMoedasCoracao
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1101422214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5601,7 +5637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000091552734, y: -0.00012207031}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
   m_SizeDelta: {x: 0.000061035, y: 0.00024414}
   m_Pivot: {x: 0.5, y: 0.54253584}
 --- !u!114 &1421065964
@@ -6680,6 +6716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b4c54c4d6ac684887de4206a8dd49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtCoracaoLoja: {fileID: 1210706715}
+  txtMoedaLoja: {fileID: 795700002}
 --- !u!114 &1645421778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6747,7 +6785,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1650071659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffda2719868f89d49a6fa881a98baf36, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c56ba4436277c64e9ddd03562bff103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textVida: {fileID: 1485156556}
@@ -7367,9 +7405,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2121265199}
-  - component: {fileID: 2121265205}
-  - component: {fileID: 2121265203}
-  - component: {fileID: 2121265204}
   - component: {fileID: 2121265201}
   - component: {fileID: 2121265200}
   - component: {fileID: 2121265202}
@@ -7379,7 +7414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2121265199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7402,8 +7437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.999023, y: 4.647217}
-  m_SizeDelta: {x: 33.637, y: 50.474}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121265200
 MonoBehaviour:
@@ -7539,44 +7574,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2121265203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121265198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b4c54c4d6ac684887de4206a8dd49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2121265204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121265198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f0f447f4cfc304c932706ff110f732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jogoOn: 0
-  novoGuarda: 0
-  moedas: 0
-  vida: 3
---- !u!114 &2121265205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121265198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd11532b52bae6241b5da12fd971354c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ValorBanco: 0
